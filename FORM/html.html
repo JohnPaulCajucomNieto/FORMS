@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Attributes Example</title>
+</head>
+    <style>
+        body{
+            background-color: rgb(255, 254, 254);   
+        }
+        img{
+            width: 250px;
+            height: auto;
+            margin-left: 250px;
+            margin-top: 50px;
+            border: 2px solid rgb(119, 46, 46);
+            border-radius: 10px;
+        }
+        #changeImageBtn{
+            border: none;
+            padding: 10px 10px 10px 10px;
+            background-color: white;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            position: relative;
+            right: 210px;
+            top: 50px;
+            cursor: pointer;
+            border: 2px solid black;
+        }
+        #changeImageBtn:hover{
+            background-color:black;
+            color: white;
+            
+        }
+        .container{
+            border: 2px solid black;
+            width: 50%;
+            margin-left: 400px;
+            margin-top: 100px;
+            box-shadow: 8px 8px 8px 8px ;
+            height: 520px;
+            border-radius: 10px;
+            background-color: orangered;
+        } 
+    </style>
+<body>
+    <div class="container">
+    <img id="myImage" src="https://images-na.ssl-images-amazon.com/images/I/81oer5HZzTL._AC_SY741_.jpg" alt="An example image">
+    <button id="changeImageBtn">Change Image Source</button>
+    </div>
+    <script>
+        let imageElement = document.getElementById('myImage');
+        let buttonElement = document.getElementById('changeImageBtn');
+        buttonElement.addEventListener('click', function() {
+        imageElement.src = 'https://i.pinimg.com/736x/3b/5b/f7/3b5bf74cb0df9a092f6e3713a0a276b0.jpg';
+        imageElement.alt = 'A different image';
+        buttonElement.textContent= 'Image Changed!';
+});
+    </script>
+</body>
+</html>
